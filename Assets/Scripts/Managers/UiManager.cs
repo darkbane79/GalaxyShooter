@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class UiManager : MonoSingleton<UiManager>
 {
     [SerializeField]
-    private Text _scoretext, _highScoreText;
+    private Text _scoretext, _highScoreText, _ammoCountText;
     private int _score;
     [SerializeField]
     private int _highScore;
     [SerializeField]
     private GameObject _pauseMenuPanel;
-
+    
+    
 
     [SerializeField]
     private Sprite[] _p1LiveSprite;
@@ -29,6 +30,7 @@ public class UiManager : MonoSingleton<UiManager>
         _scoretext.text = "Score : 0";
         _highScore = PlayerPrefs.GetInt("HighScore", 0);
         _highScoreText.text = "High Score : " + _highScore;
+        _ammoCountText.text = "Ammo : 15";
         //_p1LiveSprite[3];
 
     }
@@ -48,6 +50,7 @@ public class UiManager : MonoSingleton<UiManager>
             PlayerPrefs.SetInt("HighScore", _highScore);
             _highScoreText.text = "High Score : " + _highScore;
             
+
         } 
     }
 
@@ -86,10 +89,14 @@ public class UiManager : MonoSingleton<UiManager>
 
     }
 
-    
+
+    public void UpdateAmmo(int ammo)
+    {
+        _ammoCountText.text = "Ammo : " + ammo;
+    }
 
 
-   
+
 
 
 

@@ -20,6 +20,7 @@ public class GameManager : MonoSingleton<GameManager>
             Debug.LogError("Unable to find Animator");
         }
         _pauseAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        _pauseMenuPanel.SetActive(false);
     }
 
     private void Update()

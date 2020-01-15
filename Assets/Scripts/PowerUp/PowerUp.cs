@@ -54,6 +54,16 @@ public class PowerUp : MonoBehaviour
                 case 2:
                     Player.Instance.EnableShields();
                     break;
+                case 3:
+                    Player.Instance.Reload();
+                    break;
+                case 4:
+                    Player.Instance.RestoreLife();
+                    break;
+                case 5:
+                    Player.Instance.EnableSpreadShot();
+                    break;
+
                 default:
                     Debug.Log("Null");
                     break;

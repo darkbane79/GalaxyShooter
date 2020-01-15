@@ -49,7 +49,7 @@ public class SpawnManager : MonoSingleton<SpawnManager>
         {
             float randomX = Random.Range(-9.2f, 9.2f);
             float RandomTime = Random.Range(3, 8);
-            int randomPU = Random.Range(0, 3);
+            int randomPU = Random.Range(0, 6);
 
             Vector3 spawnPosition = new Vector3(randomX, 6.5f, 0);
             
